@@ -38,11 +38,14 @@ const ArticleItem = ({ data }) => {
           overflow: "hidden",
         }}
       >
-        <img
-          width="100%"
-          src={media[0]["media-metadata"][2].url}
-          alt="New York Times Article"
-        />
+        {media && media.length > 0 ? (
+          <img
+            width="100%"
+            src={media[0]["media-metadata"][2].url}
+            alt="New York Times Article"
+          />
+        ) : null}
+
         <div style={{ padding: 5 }}>
           <p style={{ margin: 0 }}>{abstract}</p>
         </div>

@@ -2,6 +2,7 @@ import "./App.css";
 import AppState from "./core/context/AppState";
 import NYT from "./NYT.jsx";
 import NytCont from "./components/NytCont";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   return (
@@ -11,11 +12,19 @@ const App = () => {
         <header style={{ height: "15vh" }}>
           <NYT style={{ height: "90%", marginTop: 10 }} />
         </header>
-        {/* NYT Controller */}
 
-        <div className="NytController"></div>
         {/* NYT items */}
-        <NytCont />
+        <Router>
+          <Switch>
+            <Route exact path="/">
+              <NytCont />
+            </Route>
+
+            <Route exact path="/:sid">
+              <NytCont />
+            </Route>
+          </Switch>
+        </Router>
       </div>
     </AppState>
   );

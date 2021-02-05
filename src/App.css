@@ -28,16 +28,17 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   height: 100vh;
   color: white;
 }
 
 .NytController {
-  height: 10vh;
   width: 85vw;
-  border-radius: 15px;
-  border: solid 2px black;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .NytCont {
@@ -69,4 +70,13 @@
   border-radius: 10px;
   color: inherit;
   text-decoration: inherit;
+}
+
+#button {
+  background-color: #4c6276;
+  color: inherit;
+  height: 30px;
+  border-radius: 10px;
+  border: 0;
+  cursor: pointer;
 }
