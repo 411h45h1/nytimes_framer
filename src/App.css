@@ -30,6 +30,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  color: white;
 }
 
 .NytController {
@@ -40,11 +41,12 @@
 }
 
 .NytCont {
+  background-color: #111e29;
   margin: 15px;
   height: 70vh;
   width: 90vw;
   border-radius: 15px;
-  border: solid 5px black;
+  border: solid 5px;
   padding: 15px;
   display: flex;
 
@@ -63,6 +65,8 @@
   margin: 10px;
 
   width: 30%;
-  border: 2px solid black;
-  border-radius: 15px;
+  border: 1px solid;
+  border-radius: 10px;
+  color: inherit;
+  text-decoration: inherit;
 }
