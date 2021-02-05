@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import AppState from "./core/context/AppState";
+import NYT from "./NYT.jsx";
+import NytCont from "./components/NytCont";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppState>
+      <div className="App">
+        {/* NYT Logo */}
+        <header style={{ height: "15vh" }}>
+          <NYT style={{ height: "90%", marginTop: 10 }} />
+        </header>
+        {/* NYT Controller */}
+
+        <div className="NytController"></div>
+        {/* NYT items */}
+        <NytCont />
+      </div>
+    </AppState>
   );
-}
+};
 
 export default App;

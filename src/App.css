@@ -1,38 +1,69 @@
+/* --------------- ScrollBar --------------- */
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  background-color: #4c6276;
+  border-radius: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(11, 85, 196, 0.844);
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #111e29;
+  border-radius: 7px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #222e41;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.NytController {
+  height: 10vh;
+  width: 85vw;
+  border-radius: 15px;
+  border: solid 2px black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.NytCont {
+  margin: 15px;
+  height: 70vh;
+  width: 90vw;
+  border-radius: 15px;
+  border: solid 5px black;
+  padding: 15px;
+  display: flex;
+
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow-y: scroll;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#NytItem {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
+  margin: 10px;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  width: 30%;
+  border: 2px solid black;
+  height: 30vh;
+  border-radius: 15px;
 }
