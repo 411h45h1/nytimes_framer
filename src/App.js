@@ -1,10 +1,10 @@
 import "./App.css";
-import { useContext } from "react";
 
 import AppState from "./core/context/AppState";
 import NytCont from "./components/NytCont";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
+import TopStories from "./components/TopStories";
 
 const App = () => {
   return (
@@ -19,9 +19,12 @@ const App = () => {
               <NytCont />
             </Route>
 
-            <Route exact path="/:sid">
+            <Route exact path="/most/:sid">
               <Header />
               <NytCont />
+            </Route>
+            <Route exact path="/Top_Stories">
+              <TopStories />
             </Route>
           </Switch>
         </Router>

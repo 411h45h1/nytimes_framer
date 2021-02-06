@@ -1,6 +1,7 @@
 import { motion } from "framer";
+import moment from "moment";
 
-const ArticleItem = ({ data }) => {
+const ArticleItem = ({ data, topStories }) => {
   const {
     abstract,
     title,
@@ -56,18 +57,18 @@ const ArticleItem = ({ data }) => {
       <div
         style={{
           display: "flex",
-          alignItems: "center",
           flexDirection: "row",
+          alignItems: "center",
           justifyContent: "space-between",
-          width: "95%",
+          width: "97%",
         }}
       >
         <p
-          style={{ fontSize: "12px", fontWeight: "bold" }}
-        >{`Published: ${published_date}`}</p>
+          style={{ fontSize: "12px", fontWeight: "bold", margin: 0 }}
+        >{`Published: ${moment(published_date).format("MMM Do YY")}`}</p>
         <p
-          style={{ fontSize: "12px", fontWeight: "bold" }}
-        >{`Section: ${nytdsection}`}</p>
+          style={{ fontSize: "12px", fontWeight: "bold", margin: 0 }}
+        >{`Section: ${topStories ? data.section : nytdsection}`}</p>
       </div>
     </motion.a>
   );

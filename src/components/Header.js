@@ -1,7 +1,9 @@
+import { useParams } from "react-router-dom";
 import NYT from "../NYT";
 import Button from "./Button";
 
 const Header = () => {
+  const { page } = useParams;
   return (
     <header
       style={{
@@ -17,11 +19,9 @@ const Header = () => {
           justifyContent: "space-between",
         }}
       >
-        <Button id="button" to="/Most_Shared">
-          Top Stories
-        </Button>
+        <Button to="/Top_Stories">Top Stories</Button>
       </div>
-      <NYT style={{ marginTop: 10 }} />
+      <NYT style={{ marginTop: 10 }} home />
     </header>
   );
 };

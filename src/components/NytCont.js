@@ -13,13 +13,13 @@ const NytCont = () => {
   return (
     <>
       <div className="NytController">
-        <Button id="button" to="/">
+        <Button id="button" to="/most/Most_Viewed">
           Most Viewed Articles
         </Button>
-        <Button id="button" to="/Most_Shared">
+        <Button id="button" to="/most/Most_Shared">
           Most Shared Articles
         </Button>
-        <Button id="button" to="/Most_Emailed">
+        <Button id="button" to="/most/Most_Emailed">
           Most Emailed Articles
         </Button>
       </div>

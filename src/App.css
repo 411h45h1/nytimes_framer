@@ -51,9 +51,10 @@
   background-color: #263038;
   height: 30px;
   border-radius: 10px;
-  border: 0;
   cursor: pointer;
-  width: 30%;
-  text-align: center;
+  width: 25%;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
