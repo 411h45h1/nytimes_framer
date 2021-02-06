@@ -4,7 +4,6 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  color: black;
   background-color: #3d5f7e;
 }
 
@@ -39,21 +38,22 @@
   align-items: center;
 
   margin: 8px;
-
+  background-color: #263038;
   width: 30%;
-  border: 5px solid;
+  border: 5px solid black;
   border-radius: 10px;
   color: inherit;
   text-decoration: inherit;
+  color: white;
 }
 
 #button {
   background-color: #263038;
-  color: white;
   height: 30px;
   border-radius: 10px;
   border: 0;
   cursor: pointer;
   width: 30%;
   text-align: center;
+  color: white;
 }

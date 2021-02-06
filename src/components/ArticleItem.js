@@ -34,13 +34,15 @@ const ArticleItem = ({ data }) => {
         style={{
           margin: 5,
           borderRadius: 15,
-          border: "3px solid",
+          border: "3px solid black",
+          color: "black",
           overflow: "hidden",
           backgroundColor: "#EDD5C0",
         }}
       >
         {media && media.length > 0 ? (
           <img
+            style={{ pointerEvents: "none" }}
             width="100%"
             src={media[0]["media-metadata"][2].url}
             alt="New York Times Article"

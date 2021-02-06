@@ -3,13 +3,15 @@ import { motion } from "framer-motion";
 const NYT = (props) => {
   const pathVariants = {
     hidden: { 
+      scale: 0.8,
       opacity: 0,
       pathLength: 0
     },
     visible: {
+      scale: 1,
       opacity: 1,
       pathLength: 1,
-      transition: {duration: 3, ease: 'easeInOut'}
+      transition: {duration: 3, ease: 'backInOut'}
 
     }
   }
