@@ -34,8 +34,9 @@ const ArticleItem = ({ data }) => {
         style={{
           margin: 5,
           borderRadius: 15,
-          border: "2px solid",
+          border: "3px solid",
           overflow: "hidden",
+          backgroundColor: "#EDD5C0",
         }}
       >
         {media && media.length > 0 ? (
@@ -45,7 +46,6 @@ const ArticleItem = ({ data }) => {
             alt="New York Times Article"
           />
         ) : null}
-
         <div style={{ padding: 5 }}>
           <p style={{ margin: 0 }}>{abstract}</p>
         </div>

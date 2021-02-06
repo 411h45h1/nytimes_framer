@@ -7,6 +7,7 @@ const address = "https://api.nytimes.com/svc";
 
 const AppState = (props) => {
   const initialState = {
+    lightTheme: false,
     newspaperSection: "viral",
     mostViewed: null,
     mostEmailed: null,
@@ -81,11 +82,10 @@ const AppState = (props) => {
   const handleFlipSection = (section) =>
     dispatch({ type: "FLIP_SECTION", payload: section });
 
-  // console.log("state", state);
-
   return (
     <AppContext.Provider
       value={{
+        lightTheme: state.lightTheme,
         newspaperSection: state.newspaperSection,
         mostViewed: state.mostViewed,
         mostEmailed: state.mostEmailed,

@@ -1,36 +1,11 @@
-/* --------------- ScrollBar --------------- */
-
-/* width */
-::-webkit-scrollbar {
-  width: 15px;
-  background-color: #4c6276;
-  border-radius: 3px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgba(11, 85, 196, 0.844);
-  border-radius: 5px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #111e29;
-  border-radius: 7px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #222e41;
-}
-
 .App {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  color: white;
+  color: black;
+  background-color: #3d5f7e;
 }
 
 .NytController {
@@ -42,7 +17,7 @@
 }
 
 .NytCont {
-  background-color: #111e29;
+  background-color: #ffe6a7;
   margin: 15px;
   height: 70vh;
   width: 90vw;
@@ -63,20 +38,22 @@
   flex-direction: column;
   align-items: center;
 
-  margin: 10px;
+  margin: 8px;
 
   width: 30%;
-  border: 1px solid;
+  border: 5px solid;
   border-radius: 10px;
   color: inherit;
   text-decoration: inherit;
 }
 
 #button {
-  background-color: #4c6276;
-  color: inherit;
+  background-color: #263038;
+  color: white;
   height: 30px;
   border-radius: 10px;
   border: 0;
   cursor: pointer;
+  width: 30%;
+  text-align: center;
 }
