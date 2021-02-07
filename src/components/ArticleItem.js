@@ -20,13 +20,13 @@ const ArticleItem = ({ data, topStories }) => {
       whileTap={{ scale: 0.9 }}
       drag
       dragConstraints={{
-        top: 5,
-        left: 5,
-        right: 5,
-        bottom: 5,
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
       }}
     >
-      <div style={{ padding: 2 }}>
+      <div style={{ padding: 2, textAlign: "left", width: "100%" }}>
         <h3 style={{ margin: 0 }}>{title}</h3>
         <sub>{byline}</sub>
       </div>
