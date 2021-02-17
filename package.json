@@ -1,37 +1,48 @@
 {
   "name": "nytimes",
-  "version": "0.1.0",
+  "homepage": "./",
+  "main": "./start.js",
+  "version": "1.0.0",
   "private": true,
+  "author": "Ahmed Ali",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "add": "^2.0.6",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "cross-env": "^7.0.2",
+    "electron-dl": "^3.0.2",
+    "electron-packager": "^15.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
     "framer": "^1.2.20",
     "framer-motion": "^3.3.0",
     "gh-pages": "^3.1.0",
     "moment": "^2.29.1",
-    "react": "^17.0.1",
-    "react-datepicker": "^3.4.1",
-    "react-dom": "^17.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.2",
+    "react-scripts": "3.4.3",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3",
-    "web-vitals": "^1.0.1",
-    "yarn": "^1.22.10"
+    "semantic-ui-react": "^1.2.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "nf start -p 3000",
+    "build-win": "npm run build && electron-packager . --platform win32 --icon ./public/favicon.ico --out ./dist --overwrite",
+    "build~win": "yarn build && electron-packager . --platform win32 --icon ./public/favicon.ico --out ./dist --overwrite",
+    "build~mac": "yarn build && electron-packager . --platform mas --icon ./public/favicon.ico --out ./dist --overwrite",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "electron-start": "node src/start-react",
+    "react-start": "cross-env BROWSER=none react-scripts start",
+    "postinstall": "install-app-deps"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -44,5 +55,30 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron": "^9.2.1",
+    "electron-builder": "^22.8.0",
+    "enzyme": "^3.11.0"
+  },
+  "build": {
+    "productName": "The New York Times Snapshot",
+    "copyright": "Copyright  © 2020 ",
+    "mac": {
+      "icon": "./public/favicon.ico"
+    },
+    "win": {
+      "icon": "./public/favicon.ico"
+    },
+    "files": [
+      "./build/**/*",
+      "./dist/**/*",
+      "./node_modules/**/*",
+      "./public/**/*",
+      "*.js"
+    ],
+    "directories": {
+      "buildResources": "public"
+    }
   }
 }

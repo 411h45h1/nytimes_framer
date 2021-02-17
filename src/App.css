@@ -1,3 +1,11 @@
+#NoDrag {
+  -webkit-app-region: no-drag;
+}
+
+#Drag {
+  -webkit-app-region: drag;
+}
+
 .App {
   display: flex;
   align-items: center;
@@ -5,6 +13,7 @@
   justify-content: center;
   height: 100vh;
   background-color: #c2cdce;
+  -webkit-app-region: drag;
 }
 
 .NytController {
@@ -30,6 +39,7 @@
   justify-content: center;
   flex-wrap: wrap;
   overflow-y: scroll;
+  -webkit-app-region: no-drag;
 }
 
 #button {
@@ -42,6 +52,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  -webkit-app-region: no-drag;
 }
 
 #NytItem {
